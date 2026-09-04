@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Victor | Desenvolvedor de Sistemas</title>
+  <link rel="stylesheet" href="aulajoao.css">
+  <script src="aulajoao.js" defer></script>
+</head>
+<body>
+
+  
+  <header class="navbar">
+    <div class="logo">DevJhon</div>
+    <nav class="nav-links">
+      <button onclick="irPara('hero')">Início</button>
+      <button onclick="irPara('sobre')">Sobre</button>
+      <button onclick="irPara('projetos')">Projetos</button>
+      <button onclick="irPara('quali')">Qualificações</button>
+      <button onclick="irPara('depo')">Depoimentos</button>
+      <button onclick="irPara('contato')">Contato</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <img src="https://i.postimg.cc/5tPfBM3w/Whats-App-Image-2026-09-04-at-10-48-24.jpg" alt="Foto de perfil de Jonathan Victor" class="hero-avatar">
+      <h1 class="txt-azul">Jonathan Victor</h1>
+      <p class="hero-subtitle">Desenvolvedor de sistemas e apaixonado por tecnologia, trabalhando com projetos variados desde 2024 e sempre buscando aprender coisas novas.</p>
+      <div class="hero-buttons">
+        <button class="botao" onclick="clicouBotao()">Ver projetos</button>
+        <button class="botao botao-secundario" onclick="clicouBotao()">Baixar CV</button>
+      </div>
+    </section>
+    <hr>
+
+    <section id="sobre" class="section-container">
+      <h2>Sobre mim</h2>
+      <div class="sobre-texto">
+        Sou formado em Análise e Desenvolvimento de Sistemas pela faculdade Uninassau, com experiência em projetos de front-end e back-end. Já trabalhei em empresas de tecnologia da região e também em projetos freelancer, sempre focando em entregar soluções que realmente resolvem o problema do cliente. Gosto muito de café e de resolver bugs complexos.
+      </div>
+    </section>
+
+    <section id="projetos" class="section-container">
+      <h2 class="txt-azul">Projetos feitos por mim</h2>
+      <div class="grid-container">
+        
+        <article class="card BOX">
+          <img src="https://placehold.co/250x140" alt="Sistema de Estoque">
+          <h3>Sistema de Estoque</h3>
+          <p>Sistema para controlar entrada e saída de produtos de uma loja de roupas fictícia, feito com PHP e MySQL.</p>
+          <button class="botao" onclick="clicouBotao()">Ver mais</button>
+        </article>
+
+        <article class="card BOX">
+          <img src="https://placehold.co/250x140" alt="App de Receitas">
+          <h3>App de Receitas</h3>
+          <p>Aplicativo mobile para salvar e organizar receitas de culinária, feito em React Native.</p>
+          <button class="botao" onclick="clicouBotao()">Ver mais</button>
+        </article>
+
+        <article class="card BOX">
+          <img src="https://placehold.co/250x140" alt="Landing Page Studio Yoga">
+          <h3>Landing Page Studio Yoga</h3>
+          <p>Site institucional para um estúdio de yoga fictício, com formulário de agendamento de aula experimental.</p>
+          <button class="botao" onclick="clicouBotao()">Ver mais</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="quali" class="section-container bg-white">
+      <h2 class="txt-azul">Qualificações</h2>
+      <div class="lista-qualificacoes">
+
+        <div class="BOX card">
+          <strong>Curso Técnico em Informática</strong> - Escola Técnica Estadual, 2018
+          <p class="card-detalhe">Carga horária de 1200 horas, com foco em lógica de programação e redes.</p>
+        </div>
+            <br>
+        <div class="BOX card">
+          <strong>Bacharelado em ADS</strong> - Faculdade Cesmac, 2019 a 2022
+          <p class="card-detalhe">Trabalho de conclusão sobre sistemas de recomendação usando machine learning.</p>
+        </div>
+        <br>
+
+        <div class="BOX card">
+          <strong>Certificação AWS Cloud Practitioner</strong> - 2023
+          <p class="card-detalhe">Certificação básica em serviços de nuvem da Amazon.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="depo" class="section-container">
+      <h2>O que falam sobre mim</h2>
+      <div class="grid-container">
+        <div class="BOX testimonial-card">
+          <p class="quote">"Jonathan Victor é extremamente dedicado e entrega tudo no prazo, super recomendo o trabalho dele."</p>
+          <span class="autor">Carlos Eduardo Nunes</span>
+          <span class="cargo">Gerente de projetos na TechNova</span>
+        </div>
+
+        <div class="BOX testimonial-card">
+          <p class="quote">"Trabalhamos juntos em dois projetos e a comunicação dele é excelente, sempre claro nas explicações."</p>
+          <span class="autor">Juliana Prado Santos</span>
+          <span class="cargo">Designer freelancer</span>
+        </div>
+
+        <div class="BOX testimonial-card">
+          <p class="quote">"Código limpo, bem documentado, e ele sempre pensa em performance desde o início do projeto."</p>
+          <span class="autor">Marcos Vinícius Alves</span>
+          <span class="cargo">Tech Lead na CodeBridge</span>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contato" class="section-container bg-white">
+      <h2 class="txt-azul">Fale comigo</h2>
+      <form class="form-contato" onsubmit="event.preventDefault(); enviarMsg();">
+        <label for="inputNome">Nome</label>
+        <input type="text" id="inputNome" required>
+        
+        <label for="inputEmail">E-mail</label>
+        <input type="email" id="inputEmail" required>
+        
+        <label for="inputMsg">Mensagem</label>
+        <textarea id="inputMsg" rows="4" required></textarea>
+        
+        <button type="submit" class="botao">Enviar mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p id="copyright-text">© <span id="ano-atual"></span> Jonathan Victor - Todos os direitos reservados.</p>
+    <div class="social-buttons">
+      <button class="botao" onclick="clicouBotao()">GitHub</button>
+      <button class="botao" onclick="clicouBotao()">LinkedIn</button>
+      <button class="botao" onclick="clicouBotao()">Instagram</button>
+    </div>
+  </footer>
+
+</body>
+</html>
